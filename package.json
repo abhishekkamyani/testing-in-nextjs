@@ -6,21 +6,50 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test": "jest",
+    
+    "test:user-profile-card": "npx jest UserProfileCard.test.tsx",
+    "test:news-letter-signup": "npx jest NewsLetterSignup.test.tsx",
+    "test:notification-banner": "npx jest NotificationBanner.test.tsx",
+    "test:user-profile-header": "npx jest UserProfileHeader.test.tsx",
+    "test:module6": "npx jest Module6.test.tsx",
+    "test:module7": "npx jest Module7.test.tsx --forceExit"
   },
   "dependencies": {
+    "axios": "^1.19.0",
     "next": "16.3.0",
     "react": "19.2.8",
     "react-dom": "19.2.8"
   },
   "devDependencies": {
+    "@babel/core": "^8.0.1",
+    "@babel/preset-env": "^8.0.2",
+    "@babel/preset-react": "^8.0.1",
+    "@babel/preset-typescript": "^8.0.1",
     "@tailwindcss/postcss": "^4",
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/jest-dom": "^7.0.0",
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.3",
+    "@types/jest": "^30.0.0",
+    "@types/jest-axe": "^3.5.9",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "babel-jest": "^30.4.1",
+    "esbuild": "^0.28.2",
+    "esbuild-jest": "^0.5.0",
     "eslint": "^9",
     "eslint-config-next": "16.3.0",
+    "jest": "^30.4.2",
+    "jest-axe": "^11.0.0",
+    "jest-environment-jsdom": "^30.4.1",
+    "msw": "^2.15.0",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "ts-node": "^10.9.2",
+    "typescript": "^5",
+    "undici": "^8.10.0",
+    "whatwg-fetch": "^3.6.20"
   }
 }
