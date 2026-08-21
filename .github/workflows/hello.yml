@@ -1,0 +1,12 @@
+name: My First Pipeline
+on: 
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main] # Runs whenever someone targets main in a PR
+jobs:
+  say_hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print greeting  
+        run: echo "Hello, CI/CD World!"

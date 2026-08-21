@@ -8,7 +8,6 @@
     "start": "next start",
     "lint": "eslint",
     "test": "jest",
-    
     "test:user-profile-card": "npx jest UserProfileCard.test.tsx",
     "test:news-letter-signup": "npx jest NewsLetterSignup.test.tsx",
     "test:notification-banner": "npx jest NotificationBanner.test.tsx",
@@ -23,10 +22,12 @@
     "react-dom": "19.2.8"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
     "@babel/core": "^8.0.1",
     "@babel/preset-env": "^8.0.2",
     "@babel/preset-react": "^8.0.1",
     "@babel/preset-typescript": "^8.0.1",
+    "@playwright/test": "^1.62.1",
     "@tailwindcss/postcss": "^4",
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^7.0.0",
