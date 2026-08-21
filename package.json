@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "test": "jest",
+    "test:unit": "jest --testPathPattern=tests/unit",
     "test:user-profile-card": "npx jest UserProfileCard.test.tsx",
     "test:news-letter-signup": "npx jest NewsLetterSignup.test.tsx",
     "test:notification-banner": "npx jest NotificationBanner.test.tsx",
@@ -50,7 +51,10 @@
     "tailwindcss": "^4",
     "ts-node": "^10.9.2",
     "typescript": "^5",
-    "undici": "^8.10.0",
+    "undici": "5.28.5",
     "whatwg-fetch": "^3.6.20"
+  },
+  "overrides": {
+    "undici": "5.28.5"
   }
 }

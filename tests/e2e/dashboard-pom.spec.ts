@@ -1,4 +1,4 @@
-import { DashboardPage } from "@/pages/DashboardPage";
+import { DashboardPage } from "./pages/DashboardPage";
 import test, { expect } from "@playwright/test";
 
 test("This test reads like plain English using your new POM.", async ({ page }) => {

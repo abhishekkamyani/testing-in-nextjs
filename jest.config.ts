@@ -15,6 +15,19 @@ const config: Config = {
     "^@/(.*)$": "<rootDir>/$1",
   },
   
+  // 1. Tell Jest exactly which files to look for (unit tests only)
+  testMatch: [
+    "<rootDir>/tests/unit/**/*.test.{ts,tsx,js,jsx}",
+    "<rootDir>/tests/unit/**/*.spec.{ts,tsx,js,jsx}"
+  ],
+  
+  // 2. Explicitly tell Jest to ignore the Playwright E2E folder
+  testPathIgnorePatterns: [
+    "<rootDir>/node_modules/",
+    "<rootDir>/.next/",
+    "<rootDir>/tests/e2e/"
+  ],
+
   setupFiles: ["<rootDir>/jest.polyfills.js"],
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   testEnvironment: "jsdom",
