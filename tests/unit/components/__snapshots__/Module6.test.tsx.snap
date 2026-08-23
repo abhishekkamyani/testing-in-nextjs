@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Modal & Error Boundary Suite should match external snapshot when modal is open 1`] = `
+<div
+  aria-label="Terms"
+  aria-modal="true"
+  class="modal-overlay"
+  role="dialog"
+>
+  <div
+    class="modal-content"
+  >
+    <h2>
+      Terms
+    </h2>
+    <div>
+      <p>
+        Rules...
+      </p>
+    </div>
+    <button
+      aria-label="Close Modal"
+    >
+      Close
+    </button>
+  </div>
+</div>
+`;
