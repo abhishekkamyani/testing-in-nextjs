@@ -5,17 +5,21 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    env:
+      NODE_ENV: "test"
+      STRIPE_SECRET_KEY: ${{secrets.STRIPE_SECRET_KEY}}
     steps:
       - name: Download Repository
         uses: actions/checkout@v4
-      
+
       - name: Install Node.js
         uses: actions/setup-node@v4
-        with: 
-          node-version: '^20'
-      
+        with:
+          node-version: "^20"
+          cache: npm
+
       - name: Install dependencies
         run: npm ci
-      
+
       - name: Run Unit Tests
         run: npm run test
