@@ -4,7 +4,7 @@ on:
     branches: [main]
   push:
     branches: [main]
- 
+
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
@@ -19,7 +19,18 @@ jobs:
           node-version: "^20"
           cache: npm
       - run: npm ci
-      - run: npm run test
+      
+      # 1. UPDATED: Run tests with the coverage flag
+      - name: Run tests and generate coverage
+        run: npx jest --coverage 
+        # (Note: You can also use `npm run test -- --coverage` if you prefer)
+
+      # 2. NEW: Hand the data off to the Codecov backend
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          fail_ci_if_error: true
 
   e2e_tests:
     runs-on: ubuntu-latest
